@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row-first">
+        <div class="col">
+            <img src="../../../../../assets/kirstin.png" />
+        </div>
+        <div class="col">
+            <div [innerText]="aboutMeText.AboutMeText[0]"></div>
+            <p [innerText]="aboutMeText.AboutMeText[1]"></p>
+            <p [innerText]="aboutMeText.AboutMeText[2]"></p>
+        </div>
+    </div>
+    <div>
+        {{ aboutMeText.AboutMeText[3] }}
+    </div>
+    <div class="education-section">
+        Education
+        <div class="education-item" *ngFor="let education of aboutMeText.Education">
+            <div class="school-section">{{ education.School }}</div>
+            <div class="education-description"> {{ education.Description }}</div>
+            <div class="awards-section">
+                <ul>
+                    <li *ngFor="let award of education.Awards">
+                        {{ award }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="license-section">
+        License, certifications, and award
+        <ul>
+            <li *ngFor="let license of aboutMeText.LicenseCertsAwards">
+                {{ license }}
+            </li>
+        </ul>
+    </div>
+    <div class="additional-training-section">
+        Additional Training and Professional Memberships
+        <ul>
+            <li *ngFor="let training of aboutMeText.AdditionalTraining">
+                {{ training }}
+            </li>
+        </ul>
+    </div>
+</div>

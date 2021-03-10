@@ -1,0 +1,82 @@
+<section class="main-section row" [formGroup]="contactMeForm">
+    <div class="col-lg-12">
+        <div class="text-class" *ngIf="!isSending">
+            <div class="header">
+                {{ Header }}
+            </div>
+            <div class="business-contact-info">
+                <div>
+                    {{ CONTACT_ME.BusinessName }}
+                </div>
+                <div>
+                    {{ CONTACT_ME.BusinessEmail }}
+                </div>
+                <div>
+                    {{ CONTACT_ME.BusinessAddress }} {{ CONTACT_ME.BusinessCity }}, {{ CONTACT_ME.BusinessState }}
+                    {{ CONTACT_ME.BusinessZip }}
+                </div>
+                <div>
+                    Phone: {{ CONTACT_ME.BusinessPhone }}
+                </div>
+                <div>
+                    Fax: {{ CONTACT_ME.BusinessFax }}
+                </div>
+            </div>
+            <div class="text-info">
+                {{ CONTACT_ME.Text }}
+            </div>
+            <div class="form-container">
+                <div class="form-section" #ngForm>
+                    <mat-form-field>
+                        <label>
+                            Your Name:
+                        </label>
+                        <input matInput type="text" formControlName="name" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <label>
+                            Your Phone Number:
+                        </label>
+                        <input matInput type="text" formControlName="phone" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <label>
+                            Your Email Address:
+                        </label>
+                        <input matInput type="email" formControlName="email" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <label>
+                            Your Message:
+                        </label>
+                        <textarea matInput matAutosizeMinRows="12" formControlName="message"></textarea>
+                    </mat-form-field>
+
+                    <button [disabled]="!contactMeForm.valid" mat-raised-button color="primary" class="btn btn-primary" (click)="sendMessage()">
+                        Send Message
+                    </button>
+                </div>
+                <div class="map-section">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3269.0114956989605!2d-80.77260078490887!3d34.981376780363476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885429a689d112b9%3A0xf4b5ee627c711f9f!2s8211%20Avanti%20Dr%2C%20Waxhaw%2C%20NC%2028173!5e0!3m2!1sen!2sus!4v1572173267919!5m2!1sen!2sus"
+                        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+            </div>
+            <div class="pic-section">
+                <div class="col-md-5">
+                    <img [src]="CONTACT_ME.Pic1" />
+                </div>
+                <div>
+                    <img [src]="CONTACT_ME.Pic2" />
+                </div>
+            </div>
+        </div>
+        <div *ngIf="isSending" class="spinner-container">
+            <mat-progress-spinner class="spinner" color="primary" mode="indeterminate" value="25">
+            </mat-progress-spinner>
+        </div>
+    </div>
+</section>
+<div class="spinner-container" *ngIf="isSending" class="spinner-section">
+    <mat-spinner class="spinner"></mat-spinner>
+</div>

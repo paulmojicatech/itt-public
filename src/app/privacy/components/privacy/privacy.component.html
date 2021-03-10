@@ -1,0 +1,20 @@
+<section class="main-section row">
+    <div class="col-lg-12">
+        <div class="text-class">
+            <div class="main-header header">
+                {{ PRIVACY.Header }}
+            </div>
+            <div>
+                {{ PRIVACY.Text }}
+            </div>
+            <div class="exception-header header">
+                {{ PRIVACY.Exceptions.Text }}
+            </div>
+            <div class="exceptions-list">
+                <ul>
+                    <li *ngFor="let e of PRIVACY.Exceptions.BulletPoints">{{ e }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>  
+</section>

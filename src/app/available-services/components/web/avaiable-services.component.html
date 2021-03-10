@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="link-section">
+        <button mat-button 
+            color="primary" 
+            *ngFor="let service of THERAPY_TYPES"
+            (click)="currentView = service">
+            {{ service }}
+        </button>
+    </div>
+    <div class="main-section">
+        <mat-card *ngIf="currentView === THERAPY_TYPES[1]">
+            <mat-card-header>
+                <mat-card-title>{{ typesOfTherapy.Header }}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="text-section" *ngFor="let text of typesOfTherapy.Text">
+                    {{ text }}
+                </div>
+                <div class="specialization-section">
+                    {{ typesOfTherapy.TreatmentSpecializations.Text }}
+                    <ul>
+                        <li *ngFor="let item of typesOfTherapy.TreatmentSpecializations.Items">
+                            {{ item }}
+                        </li>
+                    </ul>
+                </div>
+                <div class="summary-section">
+                    {{ typesOfTherapy.Summary }}
+                </div>
+            </mat-card-content>
+        </mat-card>
+        
+        <mat-card *ngIf="currentView === THERAPY_TYPES[0]">
+            <mat-card-header>
+                <mat-card-title>
+                    {{ clinicalSupervision.Header }}
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="clinical-text-section">
+                    {{ clinicalSupervision.Text }}
+                </div>
+                <div class="clinical-summary-section">
+                    {{ clinicalSupervision.Summary }}
+                </div>
+                <div class="supervision-type-section">
+                    <div>
+                        {{ clinicalSupervision.SupervisionHeader }}
+                    </div>
+                    <ul>
+                        <li *ngFor="let type of clinicalSupervision.SupervisionTypes">
+                            {{ type.Type }} : {{ type.Cost }}
+                        </li>
+                    </ul>
+                </div>
+            </mat-card-content>
+        </mat-card>
+        
+    </div>
+</div>

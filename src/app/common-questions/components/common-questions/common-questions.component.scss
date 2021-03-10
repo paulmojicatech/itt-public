@@ -1,0 +1,36 @@
+@import '../../../../themes/variables';
+
+.main-section {
+    font-size: $default-larger-font-size;
+    .text-class {
+        width:80%;
+        margin:auto;
+        padding-bottom: $default-padding;
+        .header {
+            font-weight: bold;
+            padding-bottom: $default-padding;
+            text-align: center;
+            font-size: $header-font-size;
+        }
+        span.section-title {
+            text-align: center;
+            color: $default-link-color;
+        }
+        span.section-title:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .active-section {
+            padding: $default-padding 0;
+
+            ul {
+                list-style: disc;
+                li {
+                    list-style-position: inside;
+                    margin-bottom: $default-padding;
+                    padding-left: $default-padding;
+                }
+            }
+        }
+    }
+}

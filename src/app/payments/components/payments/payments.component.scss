@@ -1,0 +1,23 @@
+@import '../../../../themes/variables';
+
+.main-section {
+    font-size: $default-larger-font-size;
+    .text-class {
+        width:80%;
+        margin:auto;
+        padding-bottom: $default-padding;
+        .header {
+            font-weight: bold;
+            padding-bottom: $default-padding;
+            text-align: center;
+        }
+        .link-class {
+            text-align: center;
+            padding-top: $default-padding;
+            a {
+            
+                color: $default-link-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+@import '../../../../../themes/variables';
+
+:host {
+    font-size: 1.2rem;
+    .container {
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+    .row-first {
+        display: flex;
+        margin-top: 5rem;
+        img {
+            margin-right: 1rem;
+            margin-bottom: 2rem;
+        }
+        p {
+            margin-bottom: 1.25rem;
+        }
+    }
+    .education-section {
+        margin-top: 2rem;
+        .education-item {
+            margin-top: 1rem;
+            .school-section {
+                font-weight: 600;
+                font-style: italic;
+                
+            }
+            .awards-section {
+                ul {
+                    margin: .5rem;
+                }
+            }
+        }      
+    }
+    .license-section {
+        margin-top: 2rem;
+        ul {
+            margin-top: .5rem;
+        }
+    }
+    .additional-training-section {
+        margin-top: 2rem;
+        ul {
+            margin-top: .5rem;
+        }            
+
+    }
+
+}
+
+@media screen and (max-width: $mobile-landscape) {
+    .container {
+        flex-direction: column;
+        .row-first {
+            flex-direction: column;
+            margin-right: 1rem;
+        }
+    }
+}

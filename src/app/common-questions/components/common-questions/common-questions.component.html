@@ -1,0 +1,36 @@
+<section class="main-section row">
+    <div class="col-lg-12">
+        <div class="text-class">
+            <div class="header">
+                {{ Header }}
+            </div>
+            <div *ngFor="let s of Sections">
+                <span class="section-title" (click)="showDetails(s)">{{ s.Title }}</span>  
+                <div class="active-section" *ngIf="s.IsActive">
+                    <span>{{ s.Text }}</span>
+                    <div *ngIf="s.AcceptedInsurances">
+                        {{ s.AcceptedInsurances.Header }}
+                        <ul>
+                            <li *ngFor="let p of s.AcceptedInsurances.Plans">{{ p }}</li>
+                        </ul>
+                    </div>
+                    <div *ngIf="s.Questions">
+                        <ul>
+                            <li *ngFor="let q of s.Questions">{{ q }}</li>
+                        </ul>
+                    </div>
+                    <div *ngIf="s.BulletPoints">
+                        <ul>
+                            <li *ngFor="let bp of s.BulletPoints">{{ bp }}</li>
+                        </ul>
+                    </div>
+                    <div *ngIf="s.Ways">
+                        <ul>
+                            <li *ngFor="let w of s.Ways">{{ w }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</section>

@@ -1,0 +1,37 @@
+@import '../../../../themes/variables';
+
+.link-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.text-section, 
+.summary-section, 
+.specialization-section,
+.clinical-text-section,
+.clinical-summary-section,
+.supervision-type-section {
+    font-size: $default-larger-font-size;
+}
+
+.supervision-type-section {
+    ul {
+        margin-top: 0;
+    }
+}
+
+.main-section {
+    margin: 2rem;
+}
+
+.clinical-summary-section {
+    margin: 1rem 0;
+}
+
+@media screen and (min-width: 800px) {
+    button {
+        font-size: 1.25rem;
+    }
+}

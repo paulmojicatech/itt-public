@@ -1,0 +1,50 @@
+<div *ngIf="state$ | async as state">
+  <div class="header-section">
+    <div class="header-row">
+      <div class="header-text">Kirstin R. Abraham, LCSW</div>
+      <div class="header-links">
+        <a (click)="navigate('home')">Home</a>
+        <a (click)="navigate('about')">About Me</a>
+        <a (click)="navigate('available-services')">Services Provided</a>
+        <a (click)="navigate('helpful-forms')">Helpful Forms</a>
+        <a (click)="navigate('rates')">Rates and Insurance</a>
+        <button class="top-menu" mat-button [matMenuTriggerFor]="menu">More</button>
+        <mat-menu #menu="matMenu">
+          <button class="menu-button" mat-button>Appointment Rquest</button>
+          <button class="menu-button" mat-button (click)="navigate('payments')">Make a Payment</button>
+          <button class="menu-button" mat-button (click)="navigate('questions')">Common Questions</button>
+          <button class="menu-button" mat-button (click)="navigate('contact')">Contact Me</button>
+          <button class="menu-button" mat-button (click)="navigate('privacy')">Privacy & Policy</button>
+        </mat-menu>
+      </div>
+      <div class="header-links-mobile">
+        <button mat-button [matMenuTriggerFor]="mobileMenu">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #mobileMenu="matMenu">
+          <button class="menu-button" mat-button (click)="navigate('home')">Home</button>
+          <button class="menu-button" mat-button (click)="navigate('about')">About Me</button>
+          <button class="menu-button" mat-button (click)="navigate('available-services')">Services Provided</button>
+          <button class="menu-button" mat-button (click)="navigate('helpful-forms')">Helpful Forms</button>
+          <button class="menu-button" mat-button (click)="navigate('rates')">Rates and Insurance</button>
+          <button class="menu-button" mat-button>Appointment Request</button>
+          <button class="menu-button" mat-button (click)="navigate('payments')">Make a Payment</button>
+          <button class="menu-button" mat-button (click)="navigate('questions')">Common Questions</button>
+          <button class="menu-button" mat-button (click)="navigate('contact')">Contact Me</button>
+          <button class="menu-button" mat-button (click)="navigate('privacy')">Privacy & Policy</button>
+        </mat-menu>
+      </div>
+    </div>
+
+    <picture>
+      <source [srcset]="state.currentHeaderImage">
+      <img [src]="state.currentHeaderImage" />
+    </picture>
+  </div>
+  <div class="content-section">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="footer-section">
+    <span>Copyright &#169;Paul Mojica Technologies</span>
+  </div>
+</div>

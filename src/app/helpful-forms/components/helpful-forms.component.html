@@ -1,0 +1,25 @@
+<section class="main-section row">
+    <div class="text-class">
+        {{ HELPFUL_FORMS_MODEL.Text }}
+    </div>
+    <ul>
+        <li *ngFor="let f of HELPFUL_FORMS_MODEL.Forms">
+            {{ f.Text }}
+            <ol>
+                <li *ngFor="let fd of f.FormDetails">
+                    <a [href]="fd.HREF" target="_blank">{{ fd.Text }}</a>
+                </li>
+            </ol>
+        </li>
+    </ul>
+    <div class="coordinate-care">
+        {{ HELPFUL_FORMS_MODEL.CoordinateCare.Text }}
+        <div class="coordinate-form">
+            <a [href]="HELPFUL_FORMS_MODEL.CoordinateCare.Form.HREF" target="_blank">{{ HELPFUL_FORMS_MODEL.CoordinateCare.Form.Text }}</a>
+        </div>
+    </div>
+    <div class="pdf-link">
+        {{ HELPFUL_FORMS_MODEL.PDFLink.Text }}
+        <a [href]="HELPFUL_FORMS_MODEL.PDFLink.Link.HREF" target="_blank">{{ HELPFUL_FORMS_MODEL.PDFLink.Link.Text }}</a>
+    </div>
+</section>

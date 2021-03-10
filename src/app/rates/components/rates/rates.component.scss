@@ -1,0 +1,34 @@
+@import '../../../../themes/variables';
+
+.main-section {
+    margin: 3rem;
+    font-size: $default-larger-font-size;
+    .section {
+        padding-top: $default-padding;
+        .header {
+            font-weight: bold;
+        }
+        .accepted-insurance {
+            padding-bottom: .5 * $default-padding;
+        }
+        .insurance-questions {
+            padding: .5 * $default-padding 0 .5 * $default-padding 0;
+        }
+        .link {
+            span {
+                color: $default-link-color;
+                cursor: pointer;
+            }
+            span:hover {
+                text-decoration: underline;
+            }
+        }
+        ul {
+            list-style: disc;
+            li {
+           
+                list-style-position: inside;
+            }
+        }
+    }
+}

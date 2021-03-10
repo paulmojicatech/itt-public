@@ -1,0 +1,108 @@
+@import '../themes/variables.scss';
+
+:host {
+    a {
+        cursor: pointer;
+    }
+    
+    .header-section {
+        width: 100%;
+        display: block;
+        img {
+            width: 100vw;
+        }
+        .header-text {
+            background-color: transparent;
+            font-family: "adobe-garamond-pro";
+            text-transform: uppercase;
+            font-weight: 500;
+            font-style:normal;
+            line-height: 2rem;
+            letter-spacing: 1px;
+            color: white;
+            position: absolute;
+            top: .75rem;
+            left: .75rem;
+        }
+        
+        .header-links {
+            position: absolute;
+            top: 2.75rem;
+            right: 1rem;
+            
+            width: 60vw;
+            justify-content: space-around;
+            align-items: flex-end;
+            a {
+                color: #fff;
+                text-decoration: none;
+                font-weight: 500;
+                margin-bottom: .5rem;
+            
+            }
+            .top-menu {
+                color: #fff;
+                margin-top: 1rem;
+            }
+        }
+        
+        
+    }
+
+    .footer-section {
+        display: flex;
+        align-items: center;
+        height: 4rem;
+        justify-content: center;
+        font-size: $default-larger-font-size;
+    }
+
+}
+
+// screen sizes
+
+.header-links, .header-links-mobile {
+    display: none;
+}
+// desktop
+@media screen and (min-width: $desktop) {
+    .header-links {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: $desktop) {
+    .header-links-mobile {
+        position: absolute;
+        top: 2.75rem;
+        right: 1rem;
+        width: 60vw;
+
+        display: flex;
+        justify-content: flex-end;
+        color: #fff;
+        margin-top: -2rem;
+
+        mat-icon {
+            font-size: 2rem;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: .5rem;
+        
+        }
+    }
+}
+
+.header-text {
+    font-size: $header-font-mobile-portrait-font-size;
+}
+
+@media screen and (min-width: $mobile-landscape) {
+    .header-text {
+        font-size: $header-font-size;
+    }
+}

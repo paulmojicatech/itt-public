@@ -1,0 +1,120 @@
+@import '../../../../../themes/variables';
+
+.container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    > div {
+        margin: 2rem;
+
+    }
+
+    .main-text-section {
+        font-size: $default-font-size * 1.5;
+        .paragraph-one {
+            text-align: center;
+        }
+        .paragraph-two {
+            margin-top: 1rem;
+            text-align: center;
+        }
+    }
+
+    .card-section {
+        display: flex;
+        justify-content: space-around;
+        mat-card {
+            display: flex;
+            flex-direction: column;
+        
+            mat-card-header {
+                min-height: 3rem;
+            }
+    
+            mat-card-actions {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+        
+    }
+
+    .social-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        height: 15rem;
+        margin: 0;
+        margin-right: -1rem;
+        color: #787878;
+        font-size: 1.25rem;
+        padding: 2rem;
+        
+        .last {
+            padding-bottom: 2rem;
+        }
+    }
+}
+
+.affiliation-section  {
+    display: none;
+}
+
+@media screen and (min-width: $desktop) {
+    .affiliation-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 5rem;
+        width: 65vw;
+        img {
+            max-height: 5rem;
+        }
+        .fb-icon {
+            background-color: #fff;
+            img {
+                margin-top: -.4rem;
+                margin-bottom: -.5rem;
+                height: 3rem;
+            }
+        }
+        .pintrest-icon {
+            img {
+                height: 3rem;
+            }
+        }
+        .linked-in-icon {
+            background-color: #fff;
+            img {
+                width: 3rem;
+                height: 3rem;
+                margin-top: -.4rem;
+                margin-bottom: -.5rem;
+                
+            }
+        }
+    }
+}
+
+.card-section {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    mat-card {
+        width: 75vw;
+        margin: 1.5rem;
+    }
+}
+
+@media screen and (min-width: $mobile-landscape) {
+    .card-section {
+        flex-direction: row;
+
+        mat-card {
+            width: 25vw;
+        }
+    }
+}

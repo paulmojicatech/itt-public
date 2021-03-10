@@ -1,0 +1,53 @@
+<section class="main-section row">
+    <div class="col-lg-11 section">
+        <div class="header">{{ RATES.Rates.Header }}</div>
+        <div>{{ RATES.Rates.Text }}</div>
+    </div>
+    <div class="col-lg-11 section">
+        <div class="header">{{ RATES.Insurance.Header }}</div>
+        <div class="accepted-insurance">
+        </div>
+        <ul>
+            <li *ngFor="let i of RATES.Insurance.AcceptedInsurances.Plans">{{ i }}</li>
+        </ul>
+        <div class="insurance-questions">
+            {{ RATES.Insurance.Questions.Text }}
+        </div> 
+        <ul>
+            <li *ngFor="let q of RATES.Insurance.Questions.Question">{{ q }}</li>
+        </ul>
+    </div>
+    <div class="col-lg-11 section">
+        <div class="header">{{ RATES.ReducedFee.Header }}</div>
+        <div>{{ RATES.ReducedFee.Text }}</div>
+    </div>
+    <div class="col-lg-11 section">
+        <div class="header">{{ RATES.TypesOfSessions.Header }}</div>
+        <div>{{ RATES.TypesOfSessions.Text }}</div>
+    </div>
+    <div class="col-lg-11 section">
+        <div class="header">{{ RATES.Payment.Header }}</div>
+        <div>{{ RATES.Payment.Text }}</div>
+    </div>
+    <div class="col-lg-11 section">
+        <div class="header">{{ RATES.CancellationPolicy.Header }}</div>
+        <div>{{ RATES.CancellationPolicy.Text }}</div>
+    </div>
+    <!-- <div class="col-lg-11 section">
+        <div class="header">{{ rates.ScheduleOnline.Header }}</div>
+        <div class="link">
+            {{ rates.ScheduleOnline.Text.Text }}
+            <span [routerLink]="rates.ScheduleOnline.Text.Link.HREF" class="link">
+                {{ rates.ScheduleOnline.Text.Link.Text }}
+            </span>
+        </div>
+    </div> -->
+    <div class="col-lg-11 section">
+        <div class="header">
+            {{ RATES.Contact.Header }}
+        </div>
+        <div class="link">
+            <span [routerLink]="RATES.Contact.Text.Link.HREF">{{ RATES.Contact.Text.Text }}</span>
+        </div>
+    </div>
+</section>

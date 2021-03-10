@@ -1,0 +1,60 @@
+@import '../../../themes/variables';
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    font-size: $default-larger-font-size;
+
+    .text-class {
+        padding-left: 2 * $default-padding;
+        padding-bottom: $default-padding;
+    }
+    ul {
+        list-style: disc;
+        padding-bottom: $default-padding;
+
+        li {
+            list-style-position: inside;
+            padding-left:  6 * $default-padding;
+            a {
+                color: $default-link-color;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    ol {
+        list-style: circle;
+        padding-bottom: $default-padding;
+        li {
+            list-style-position: inside;
+            padding-left: $default-padding;
+        }
+    }
+    .coordinate-care {
+        padding-left: 2 * $default-padding;
+        padding-bottom: $default-padding;
+
+        .coordinate-form {
+            padding-top: $default-padding;
+            a {
+                text-decoration: none;
+                color: $default-link-color;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        }        
+    }
+
+    .pdf-link {
+        padding-left: 2 * $default-padding;
+        padding-bottom: $default-padding;
+        a {
+            color: $default-link-color;
+        }
+    }
+}

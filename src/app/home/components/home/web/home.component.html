@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="main-text-section">
+        <div class="paragraph-one">
+            {{ homeService.getMainSectionParagraphOne() }}
+        </div>
+        <div class="paragraph-two">
+            {{ homeService.getMainSectionParagraphTwo() }}
+            <a href="mailto:kirstin.abraham@marvintherapy.com">kirstin.abraham@marvintherapy.com</a>
+        </div>
+    </div>
+    <div class="card-section">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>{{ typesOfTherapy.header }}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content> {{ typesOfTherapy.description }}</mat-card-content>
+            <mat-card-actions>
+              <button mat-button routerLink="../available-services">Learn More...</button>
+            </mat-card-actions>
+        </mat-card>
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>{{ clinicalSupervision.header }}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>{{ clinicalSupervision.description }}</mat-card-content>
+            <mat-card-actions>
+                <button mat-button routerLink="../available-services">Learn More...</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+    <div class="social-section">
+        <div class="first">
+            Kirstin R. Abraham, LCSW | Phone: (704) 233-7594 | Fax: (866) 706-1632
+        </div>
+        <div>
+            Email: kirstin.abraham@marvintherapy.com
+        </div>
+        <div class="last">
+            Address: 8211 Avanti Drive, Marvin, NC  28173
+        </div>
+        <div class="affiliation-section">
+            <img src="../../../../../assets/psych.jpg" />
+            <a href="https://therapists.psychologytoday.com/rms/prof_detail.php?profid=118077&sid=1472443324.6344_3360&city=Indian+Trail&county=Union&state=NC&tr=ResultsName">
+                <img src="../../../../../assets/verified_link.jpg" />
+            </a>
+            <a class="fb-icon" target="_blank" href="http://www.facebook.com/indiantrailtherapy">
+                <img src="../../../../../assets/facebook.svg" />
+            </a>
+            <a class="pintrest-icon" target="_blank" href="https://www.pinterest.com/KAtherapist/">
+                <img src="../../../../../assets/pintrest.svg" />
+            </a>
+            <a class="linked-in-icon" target="_blank" href="https://www.linkedin.com/in/kirstin-r-abraham-lcsw-94687622/">
+                <img src="../../../../../assets/linkedin.svg"/>
+            </a>
+            <img src="../../assets/columbia.jpg" class="img-group columbia-image"/>
+        </div>
+    </div>
+</div>

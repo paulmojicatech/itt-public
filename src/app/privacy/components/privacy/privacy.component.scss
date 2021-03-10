@@ -1,0 +1,31 @@
+@import '../../../../themes/variables';
+
+
+.main-section {
+    font-size: $default-larger-font-size;
+    .text-class {
+        width:80%;
+        margin:auto;
+        padding-bottom: $default-padding;
+        .header {
+            font-weight: bold;
+            padding-bottom: $default-padding;
+            text-align: center;
+        }
+        .exception-header {
+            margin-top: 1rem;
+        }
+        .main-header {
+            font-size: $header-font-size;
+        }
+        .exceptions-list {
+            ul {
+                list-style: disc;
+                li {
+                    padding-left: .5 * $default-padding;
+                    list-style-position: inside;
+                }
+            }
+        }
+    }
+}
