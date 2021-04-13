@@ -8,7 +8,8 @@
     },
     "responseOverrides": {
         "404": {
-            "rewrite": "/"
+            "rewrite": "/",
+            "statusCode": 200
         }
     }
 }
