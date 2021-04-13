@@ -8,7 +8,7 @@
     },
     "responseOverrides": {
         "404": {
-            "rewrite": "/"
+            "rewrite": "index.html"
         }
     }
 }
